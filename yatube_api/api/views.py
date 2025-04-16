@@ -47,7 +47,7 @@ class GroupViewSet(viewsets.ReadOnlyModelViewSet):
 class FollowViewSet(
     viewsets.GenericViewSet,
     mixins.ListModelMixin,
-    mixins.CreateModelMixin
+    mixins.CreateModelMixin,
 ):
     serializer_class = FollowSerializer
     filter_backends = (filters.SearchFilter,)

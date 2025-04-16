@@ -7,12 +7,6 @@ from posts.models import Comment, Post, Group, Follow, User
 User = get_user_model()
 
 
-class PrimaryKeyToUsernameField(serializers.PrimaryKeyRelatedField):
-
-    def to_representation(self, value):
-        return value.username
-
-
 class PostSerializer(serializers.ModelSerializer):
     author = serializers.SlugRelatedField(
         read_only=True,
